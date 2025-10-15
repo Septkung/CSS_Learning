@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css basic</title>
+    <!-- id/class/tag selector -->
+    <!-- union or multiple selector-->
+    <style> 
+        /* internal(embed) */
+        h1{
+            color: brown;
+            font-size: 50px;
+        }
+        /* . = class */
+        .title{
+            color: blueviolet;
+        }
+        /* # = id */
+        #title{
+            color: darkgreen;
+        }
+        h1,.title{
+            font-style: italic;
+        }
+        p.message{
+            font-weight: bolder;
+        }
+    </style>
+    <!--External เอาไฟล์ css จากข้างนอก-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Basic CSS</h1>
+    <h1 class="title">SeptKung</h1>
+    <h1 id="tilte">CSS3</h1>
+    <p class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, cumque!</p>
+    <h1 class="message">SeptKung</h1><hr>
+
+    <h1>การประกาศใช้ css</h1>
+    <h2 style="color: blueviolet;">Internal(inline)</h2>
+    <h2 class="title">Internal(embeded)</h2>
+    <p id="message">Lorem ipsum dolor sit amet.</p><hr>
+
+    <h1>unit in css</h1>
+    <p>แบบ absolute
+        px : 1 px = 0.75pt
+        ,pt
+        ,cm
+        ,mm
+        ,in
+        ,pc</p>
+    <p>แบบ relative
+        %
+        ,em
+        ,rem
+        ,vw
+        ,vh
+        vmin,vmax
+    </p>
+
+</body>
+</html>
