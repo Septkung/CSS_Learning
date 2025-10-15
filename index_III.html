@@ -11,20 +11,31 @@
         }
         .box-1{
             background-color: rgb(55, 180, 55);
-            border: solid 5px black;
+            border-style: double;
         }
         .box-2{
             background-color: blue;
-            border: dotted 5px violet;
+            border-left-style: dotted;
+            border-right-style: solid;
+            border-top-style: dashed;
+            border-bottom-style: double;
+            border-bottom-color: red;
+            border-bottom-width: 5px;
         }
         .box-3{
             background-color: pink;
-            border: dashed 5px red;
+            border-style: solid;
+            border-color: blueviolet;
+            border-width: 5px;
+            border-radius: 10px 20px 30px 40px ;
+            /* topleft topright bottomright bottomleft */
         }
         .box-4{
             background-color: yellow;
-            border: solid;
-            border-radius: 10px;
+            border-style: solid;
+            border-width: 5px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 15px;
         }
         img{
             width: 50%;
@@ -32,6 +43,8 @@
             max-width: 150px;
             max-height: 150px;
             border: solid;
+            border-width: 5px;
+            border-color: rgb(45, 161, 161);
             border-radius: 15px;
         }
     </style>
