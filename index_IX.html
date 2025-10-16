@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            height: 4000px;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+        /* position defalut เป็น static */
+        #box-1{
+            background-color: rgb(255, 0, 0);
+            position: relative;
+            /* ออกจากตำแหน่งเดิมไปจากซ้าย 50px */
+            left: 50px;
+            top: 50px;
+            /* จัด layer ไว้ข้างหน้า */
+            z-index: 1;
+        }
+        #box-2{
+            /* เปลี่ยนตำแหน่งอ้างอิงตาม container */
+            background-color: rgb(255, 123, 0);
+            position: absolute;
+            top: 100px;
+        }
+        #box-3{
+            background-color: rgb(255, 251, 0);
+            position: absolute;
+            top: 50px;
+            right: 100px;
+        }
+        #box-4{
+            background-color: rgb(145, 255, 0);
+            /* fixed ตามหน้าจอ */
+            position: fixed;
+        }
+        #box-5{
+            background-color: rgb(43, 255, 0);
+            position: sticky;
+            /* ติดขอบบน */
+            top: 0;
+
+        }
+        #box-6{
+            background-color: rgb(0, 255, 149);
+            margin-top: 500px;
+            position: sticky;
+            left: 50px;
+            top:0
+        }
+        .container{
+            position: relative;
+            top: 100px;
+            width: 500px;
+            height: 500px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <a href="#box-5">box5</a>
+    <a href="#box-6">box6</a>
+    <div id="box-1" class="box"></div>
+    <div class="container">
+        <div id="box-2" class="box"></div>
+        <div id="box-3" class="box"></div>
+    </div>
+    <div id="box-4" class="box"></div>
+    <div id="box-5" class="box"></div>
+    <div id="box-6" class="box"></div>
+</body>
+</html>
