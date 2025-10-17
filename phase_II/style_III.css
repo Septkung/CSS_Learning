@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+}
+.flex-container{
+    /* default ของ flex คือแนว x left to right */
+    background-color: aqua;
+    display: flex;
+    /* row = x axis , column = y axis 
+    ถ้าใส่ -reverse จะกลับทิศการเรียง
+    */
+    flex-direction: column;
+
+    /* flex-wrap default = nowrap(ไม่ห่อถ้า item เกินก็เลย container) 
+    ถ้าใส่ -reverse จะกลับทิศการเรียง*/
+    /* flex-wrap: wrap; */
+
+    /* จัดตำแหน่งของ item (แถวของ item เฉยๆ อย่าสับสนกับ align item)*/
+    justify-content: space-between;
+
+    /* ย้ายตำแหน่งตามจอ */
+    align-items: center;
+
+}
+.item{
+    background: orange;
+    border: 1px solid black;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    /* ทำให้ทุก item ขยายเต็ม container และมีขนาดเท่ากัน*/
+    /* flex:1; */
+}
+/* 
+.item2{
+    ขยายจากรอบๆ
+    flex-basis: 1;
+}
+.item3{
+    หดต่างจาก object รอบๆ เป็นเท่าๆ
+    flex-shrink: 2;
+}
+.item1{
+    0 คือไม่ขยาย
+    flex-grow: 1;
+} 
+*/
