@@ -1,0 +1,26 @@
+li{
+    padding: 0.25rem;
+    margin: 0.25rem;
+    list-style: none;
+}
+
+/* Pseudo Selectors
+        first-child
+        last-child
+        nth-child */
+
+/* li:first-child{
+    background-color: red;
+}
+li:last-child{
+    background-color: orange;
+} */
+/* นับจากตัวแรก */
+li:nth-child(3){
+    background-color: darkgreen;
+}
+li:nth-child(2n+1){
+    background-color: orange;
+}li:nth-child(even){
+    background-color: skyblue;
+}
