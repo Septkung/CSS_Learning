@@ -1,0 +1,130 @@
+h1{
+    text-shadow: 2px 2px 2px red;
+    /* x-axis y-axis blur-value color */
+}
+
+/* --xxxx = ประกาศตัวแปร */
+:root{
+    --box:1px solid red;
+    --theme-color:beige;
+    --shadow: 2px 2px 2px red;
+    --spacing:5px;
+}
+
+/* ควรใช้ตัวแปร เพราะแก้ทีละอันไม่สะดวก */
+.box-1{
+    border:var(--box);
+    background-color: var(--theme-color);
+    margin: var(--spacing);
+    padding: var(--spacing);
+    box-shadow: var(--shadow);
+}
+.box-2{
+    border:var(--box);
+    background-color: var(--theme-color);
+    margin: var(--spacing);
+    box-shadow: var(--shadow);
+    padding: var(--spacing);
+}
+.box-3{
+    border:var(--box);
+    background-color: var(--theme-color);
+    margin: var(--spacing);
+    box-shadow: var(--shadow);
+    padding: var(--spacing);
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 2px solid black;
+
+    /* ย้ายตำแหน่ง */
+    /* transform: translate(200px,100px); */
+    /* x-axis y-axis */
+    /* transform: rotate(45deg); */
+    /* transform: scale(2); */
+    /* การเอียง */
+    transform: skew(10deg);
+}
+.box-4{
+    background-color: orange;
+    width: 100px;
+    height: 100px;
+    /* transition-property: background-color;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 1s; */
+
+    /* หรือเขียนแบบย่อ */
+    transition: all 0.5s linear 0.1s;
+    /* propoties duration function delay */
+    /* transition: background 2s ease-in 3s; */
+}
+.box-4:hover{
+    background-color: rgb(9, 255, 0);
+    width: 200px;
+    border-radius: 10px;
+}
+.box-5{
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation-name: animate2;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+    /* animation-name: animate1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in; */
+}
+
+@keyframes animate1{
+    from{
+        width: 100px;
+    }
+    to{
+        width: 300px;
+    }
+}
+@keyframes animate2{
+    0%{
+        top: 0;
+        left: 0;
+        transform: rotate(0deg);
+        background-color: red;
+    }
+    25%{
+        top: 0;
+        left:300px;
+        transform: rotate(72deg);
+        background-color: rgb(255, 153, 0);
+
+    }
+    50%{
+        top: 300px;
+        left: 300px;
+        transform: rotate(144deg);
+        background-color: rgb(255, 251, 0);
+
+    }
+    75%{
+        top: 300px;
+        left: 0;
+        transform: rotate(216deg);
+        background-color: rgb(30, 255, 0);
+
+    }
+    100%{
+        top: 0;
+        left: 0;
+        transform: rotate(360deg);
+        background-color: rgb(255, 0, 0);
+
+    }
+}
